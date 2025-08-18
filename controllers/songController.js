@@ -17,7 +17,7 @@ const createSong = asyncHandler(async (req, res) => {
     const dataURI = `data:${req.file.mimetype};base64,${b64}`;
     
     const uploadResult = await cloudinary.uploader.upload(dataURI, {
-      resource_type: 'audio',
+      resource_type: 'auto',
       folder: 'mern-music-app/songs',
     });
 
@@ -86,7 +86,7 @@ const updateSong = asyncHandler(async (req, res) => {
     const dataURI = `data:${req.file.mimetype};base64,${b64}`;
     
     const uploadResult = await cloudinary.uploader.upload(dataURI, {
-      resource_type: 'video',
+      resource_type: 'audio',
       folder: 'mern-music-app/songs',
     });
 
