@@ -10,7 +10,10 @@ A RESTful API built with Node.js, Express, and MongoDB for managing songs and ge
   - Number of songs in each album  
 - **Data Validation**: Robust input validation using Mongoose schemas  
 - **Error Handling**: Centralized error handling middleware  
-- **Docker Support**: Containerized application for easy deployment  
+- **Docker Support**: Containerized application for easy deployment
+- **File Upload Support**: Upload and manage music files (Cloudinary, AWS S3)  
+- **JWT Authentication**: Secure access for authorized users  
+- **Advanced Filtering & Search**: Search songs with filters for genre, artist, and album  
 
 ---
 
@@ -86,13 +89,6 @@ docker run -p 5000:5000 music-app-backend
    - `MONGODB_URI` = your MongoDB Atlas connection string  
    - `NODE_ENV=production`  
 5. Deploy and get your live API URL.  
-
----
-
-## ✅ Future Improvements
-- 🎶 Add file upload support for music files (Cloudinary, AWS S3)  
-- 🔐 Implement JWT authentication for secure access  
-- 📊 Add advanced filtering and search for songs  
 
 ---
 
