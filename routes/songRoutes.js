@@ -6,7 +6,7 @@ import upload from '../utils/multerConfig.js';
 const router = express.Router();
 
 router.route('/')
-  .get(getSongs)
+  .get(protect, getSongs)
   .post(protect, upload.single('audioFile'), createSong);
 
 router.route('/:id')
