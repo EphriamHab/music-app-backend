@@ -110,6 +110,16 @@ const updateSong = asyncHandler(async (req, res) => {
   const updatedSong = await song.save();
   res.json(updatedSong);
 });
+const getSong = asyncHandler(async (req, res) => {
+  const song = await Song.findById(req.params.id);
+
+  if (!song) {
+    res.status(404);
+    throw new Error("Song not found");
+  }
+
+  res.json(song);
+});
 
 const deleteSong = asyncHandler(async (req, res) => {
   const song = await Song.findById(req.params.id);
